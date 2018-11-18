@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <div class="dropdown">
+    <div class="dropdown-toggle" data-toggle="dropdown" >Dropdown Example
+    <span class="caret"></span></div>
+    <ul class="dropdown-menu">
+      <li><a href="#">houses</a></li>
+      <li><a href="#">rental houses</a></li>
+      <li><a href="#">hostels</a></li>
+    </ul>
+  </div>
+</div>
+<p id="n">navya</p>
+<script>
+  function n() {
+    location.href = " ";
+  };
+  var i=0
+    $(document).on('click', '.dropdown-menu li a', function() {
+     var selected=$(this).html()
+     document.getElementById("n").innerHTML=selected;
+     $.ajax({
+               url: "variable",
+               type: "GET",
+               data: {
+                   selected: selected,
+                 },
+               });
+        n()
+      });
+</script>
+</body>
+</html>
+
+<!--
+<iframe width="300" height="200" src="iframe" align="left">
+</iframe>-->
+<script>
+  function n() {
+    location.href = " ";
+  };
+  var i=0
+  $(document).on('click', '.dropdown-menu li a', function() {
+   var selected=$(this).html()
+   $.ajax({
+             url: "variable",
+             type: "GET",
+             data: {
+                 selected: selected,
+               },
+             });
+      n()
+    });
+
+</script>

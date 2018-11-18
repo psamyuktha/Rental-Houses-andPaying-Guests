@@ -1,0 +1,84 @@
+
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static "basic/style.css" %}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#">Become a host</a></li>
+      <li><a href="#">Help</a></li>
+      <li><a href="#">Sign up</a></li>
+      <li><a href="#">Log in</a></li>
+    </ul>
+    <form class="navbar-form navbar-left" action="/actio_page.php">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search" name="search">
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="transparent" class="container-fluid">
+  <div class="place">
+    <div class="center">
+			<div class="row">
+				<div class="col">
+          <div style="color:black">
+					<form action="{% url 'basic-home' %}" method="POST" name = "trial">
+            {%  csrf_token %}
+						<select  name="housetype" id='name'>
+							<option disabled selected value="house type">house type</option>
+							<option value="houses">houses</option>
+							<option value="hostel">hostel</option>
+						</select>
+            <select  name="pricerange">
+							<option disabled selected value="price range">price range</option>
+							<option value="houses">low</option>
+							<option value="hostel">medium</option>
+              <option value="hostel">high</option>
+						</select>
+					  <button type="submit">search</button>
+					</form>
+        </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4">
+      <iframe id ="myIframe" src="{% url 'basic-maps' %}" width="100%" height="650px"></iframe>
+    </div>
+    <div class="col-sm-8">
+      {% if  selected %}
+        {% for each in selected %}
+            <div class="card" style="float:left">
+              <img class="card-img-top" src="{% static "basic/images/hotel.jpg" %}" style="width:100%;height:190px;">
+              <div class="card-text">
+                  <p>{{each.pr_type}}</p>
+              </div>
+            </div>
+
+      {% endfor %}
+      {% endif %}
+
+  </div>
+</div>
+</body>
+</html>
