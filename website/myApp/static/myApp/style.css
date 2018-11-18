@@ -1,0 +1,15 @@
+.navbar-brand
+body{
+    background-image :url('images/background.jpg');
+    /*background-image: url('images/background.jpg')*/
+}
+
+.navbar{
+    border: none;
+    border-radius: 0;
+}
+
+.navbar-brand{
+    font-family: 'Satisfy', cursive;
+}
+

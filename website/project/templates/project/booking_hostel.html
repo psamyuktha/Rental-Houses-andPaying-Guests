@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+    <h2>Confirm your booking</h2>
+    <table frame="box">
+
+        <tr>
+            <td>
+            <img src="{{ image }}" style="height: 100px">
+            <h3>{{ street }},{{ city }},{{ state }},{{ zipcode }}</h3>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <h3>checkin date:{{ checkin }}<br>
+            checkout date:{{ checkout }}</h3>
+            <p>Stayduration : {{ stayduration }} night</p>
+            </td>
+        </tr>
+        <tr>
+       <td>
+        Total(INR) : {{ totalcost }}
+       </td>
+        </tr>
+        <tr>
+            <td>
+        <form method="post" action="{% url 'project:booking_hostel' %}">
+            {% csrf_token %}
+        <input type="submit" value="Confirm booking">
+        </form>
+            </td>
+         </tr>
+    </table>
+</center>
+</body>
+</html>
