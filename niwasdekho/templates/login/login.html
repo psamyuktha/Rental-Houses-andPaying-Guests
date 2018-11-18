@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>َLogin Form</title>
+    <link rel="stylesheet" href="login.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  </head>
+  <body >
+
+<form class="box" action="index.html" method="post">
+    <h1 style="color:black">Login</h1>
+    <input style="color:black" type="text" onfocus="onFocus()" name="" placeholder="Username" required="">
+    <input style="color:black" type="password" name="" placeholder="Password" required="">
+    <input style="color:black" type="submit" name="" value="Login">
+    <br>
+    <div class="rounded-social-buttons">
+    <a class="social-button facebook" href="#"></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <a class="social-button google" href="#"></a>
+    </div>
+    <br><hr><br>
+    <a class="active" href="#"  onclick="document.getElementById('modal-wrapper').style.display='block'"><u>forgot password?</u></a><br><br>
+    <p style="color:black;">Don' t have an account?</p><br>
+    <a href="#" style="color:darkgreen"><span >Register</span></a>
+  </form>
+
+  <div id="modal-wrapper" class="modal">
+  	<form class="modal-content animate" action="/action_page.php">
+  	<div class="container">
+  		<span onclick="document,getElementById('modal-wrapper').style.display='none'" class="close" title="close popup">&times;</span>
+  	</div>
+
+  <div class="container">
+  	  <input  type="email" placeholder="Email" name="uname" required="">
+  	  <input onclick="myFunction()" type="submit" name="submit" style="color:black">
+
+  	</div>
+
+  	</form>
+  </div>
+
+
+<script type="text/javascript">
+function onFocus() {
+  document.getElementById('blur').setAttribute('class', 'blury');
+}
+
+
+var modal=document.getElementById('modal-wrapper');
+window.onclick=function(event){
+	if(event.target== modal){
+		modal.style.display="none";
+	}
+}
+
+function myFunction() {
+    alert("A link has been sent to your email !");
+}
+
+
+</script>
+
+
+  </body>
+</html>

@@ -1,0 +1,75 @@
+body {
+  background-color: #f0f0f0;
+}
+
+*,
+:after,:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+}
+
+
+
+.text-style{
+  color:rgba(0,0,0,0.6);
+  font-weight:bold;
+}
+
+.option-class{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance:5px solid black;
+  /* Some browsers will not display the caret when using calc, so we put the fallback first */
+  background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") white no-repeat 98.5% !important; /* !important used for overriding all other customisations */
+  background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") white no-repeat calc(100% - 10px) !important; /* Better placement regardless of input width */
+  padding-left:6px;
+  color:rgba(0,0,0,0.5);
+  font-weight:600;
+  width:280px;
+  height:40px;
+  border:0.5px smooth black;
+  border-color:#b6b5b547;
+  background-color:rgba(255,255,255,0.45);
+  border-radius: 5px;
+}
+
+.address-class{
+
+  color:rgba(0,0,0,0.5);
+  padding-left: 0px;
+  padding-right: 0px;
+  font-weight:600;
+  float:top;
+  width:300px;
+  text-align:center;
+  height:150px;
+  border:1px smooth black;
+  border-color:#b6b5b547;
+  background-color:rgba(255,255,255,0.45);
+  border-radius: 5px;
+
+
+}
+
+
+.box select:focus,option:focus{
+border-radius: 5px;
+border-color:green;
+
+}
+.box{
+  width: 800px;
+  height:750;
+  padding-top: 30px;
+  padding-bottom:70px;
+  position:absolute;
+  top:0%;
+  left:50%;
+  transform: translate(-50%,0%);
+  background:rgba(255,255,255,0.45);
+  text-align: center;
+  z-index:2;
+}

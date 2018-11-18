@@ -1,0 +1,353 @@
+body {
+  background-color: #000;
+}
+
+*,
+:after,:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+img {
+  border-radius: 50%;
+  background-color:#f0f0f0;
+  z-index:5;
+}
+
+.heading-class{
+  color:rgba(0,0,0,0.5);
+  font-weight:bold;
+}
+
+.option-class{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance:5px solid black;
+  /* Some browsers will not display the caret when using calc, so we put the fallback first */
+  background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") white no-repeat 98.5% !important; /* !important used for overriding all other customisations */
+  background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") white no-repeat calc(100% - 10px) !important; /* Better placement regardless of input width */
+
+  padding-left:6px;
+  color:rgba(0,0,0,0.5);
+  font-weight:600;
+  width:280px;
+  height:45px;
+  border:0.5px smooth black;
+  border-color:#b6b5b547;
+  background-color:rgba(255,255,255,0.45);
+  border-radius: 5px;
+}
+.Price-class{
+
+  color:rgba(0,0,0,0.5);
+  font-weight:600;
+  width:350px;
+  text-align:center;
+  height:40px;
+  border:1px smooth black;
+  border-color:#b6b5b547;
+  background-color:rgba(255,255,255,0.45);
+  border-radius: 5px;
+}
+
+.Description-class{
+
+  color:rgba(0,0,0,0.5);
+  padding-left: 0px;
+  padding-right: 0px;
+  font-weight:600;
+  float:top;
+  width:350px;
+  text-align:center;
+  height:150px;
+  border:1px smooth black;
+  border-color:#b6b5b547;
+  background-color:rgba(255,255,255,0.45);
+  border-radius: 5px;
+
+
+}
+
+
+.box input:focus,.box input:focus{
+border-radius: 5px;
+border-color:green;
+
+}
+.box{
+  width: 800px;
+  height:absolute;
+  padding-top: 5px;
+  padding-bottom:70px;
+  position:absolute;
+  top:4%;
+  left:50%;
+  transform: translate(-50%,0%);
+  background:rgba(255,255,255,0.45);
+  text-align: center;
+  z-index:2;
+}
+
+.box1{
+  width: 800px;
+  height:relative;
+  padding-top:60px;
+  padding-bottom:-4px;
+  position:relative;
+  top:0%;
+  bottom:60%;
+  left:50%;
+  transform: translate(-50%,0%);
+  background:rgba(255,255,255,0.45);
+  text-align: center;
+  z-index:0;
+}
+
+
+
+.box2{
+  width: 800px;
+  height:755px;
+  padding-top:60px;
+  padding-bottom:-4px;
+  position:relative;
+  top:0%;
+  bottom:60%;
+  left:50%;
+  transform: translate(-50%,0%);
+  background:rgba(255,255,255,0.45);
+  text-align: center;
+  z-index:0;
+}
+
+
+
+
+
+
+
+section {
+  height: 100vh;
+  width: 100%;
+
+
+}
+section.ok{
+  background-color:#f0f0f0;
+}
+section.ok1{
+  background-color:#f0f0f0;
+}
+
+section.ok2{
+background-color: #f0f0f0;
+}
+
+section.ok3{
+  background-color: #000;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/
+
+.scroll-down,.scroll-down1,.scroll-down2,.scroll-down3,.scroll-up1,.scroll-up2,.scroll-up2 {
+  opacity: 1;
+  -webkit-transition: all .5s ease-in 3s;
+  transition: all .5s ease-in 3s;
+}
+
+.scroll-up1{
+  position:absolute;
+  bottom:-45px;
+  left: 50%;
+  margin-left: -16px;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 2px solid black;
+  background-size: 14px auto;
+  border-radius: 50%;
+  z-index:2;
+
+}
+.scroll-up2{
+  position: absolute;
+  bottom: -810px;
+  left: 50%;
+  margin-left: -16px;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 2px solid black;
+  background-size: 14px auto;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.scroll-up3{
+  position: absolute;
+  bottom: -1570px;
+  left: 50%;
+  margin-left: -16px;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 2px solid #FFF;
+  background-size: 14px auto;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+
+
+
+.scroll-down{
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -16px;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 2px solid black;
+  background-size: 14px auto;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.scroll-down1{
+  position: relative;
+  bottom:0px;
+  left: 50%;
+  margin-left: -16px;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 2px solid black;
+  background-size: 14px auto;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.scroll-down2{
+  position: absolute;
+  bottom: -1480px;
+  left: 50%;
+  margin-left: -16px;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 2px solid black;
+  background-size: 14px auto;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+
+
+
+.scroll-down:before,.scroll-down1:before,.scroll-down2:before,.scroll-down3:before{
+    position: absolute;
+    top: calc(50% - 8px);
+    left: calc(50% - 6px);
+    transform: rotate(-45deg);
+    display: block;
+    width: 12px;
+    height: 12px;
+    content: "";
+    border: 2px solid black;
+    border-width: 0px 0 2px 2px;
+}
+
+.scroll-up1:before,.scroll-up2:before,.scroll-up3:before{
+    position: absolute;
+    top: calc(50% - 5px);
+    left: calc(50% - 5px);
+    transform: rotate(-225deg);
+    display: block;
+    width: 12px;
+    height: 12px;
+    content: "";
+    border: 2px solid black;
+    border-width: 0px 0 2px 2px;
+}
+
+
+.input-number-group {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.input-number-group input[type=number]::-webkit-inner-spin-button,
+.input-number-group input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+}
+
+.input-number-group .input-group-button {
+  line-height: calc(80px/2 - 5px);
+}
+
+.input-number-group .input-number {
+  width: 80px;
+  padding: 0 12px;
+  vertical-align: top;
+  text-align: center;
+  outline: none;
+  display: block;
+  margin: 0;
+}
+
+.input-number-group .input-number,
+.input-number-group .input-number-decrement,
+.input-number-group .input-number-increment {
+  border:none;
+  background-color: inherit;
+  height: 40px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-radius: 0;
+}
+
+.input-number-group .input-number-decrement,
+.input-number-group .input-number-increment {
+  display: inline-block;
+  width: 40px;
+  border-radius: 50%;
+  background: #e6e6e6;
+  color: #0a0a0a;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.input-number-group .input-number-decrement {
+  margin-right: 0.3rem;
+}
+
+.input-number-group .input-number-increment {
+  margin-left: 0.3rem;
+}
