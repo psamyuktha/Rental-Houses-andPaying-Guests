@@ -68,38 +68,25 @@
     </ol>
 
     <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
+   <div class="carousel-inner" role="listbox">
+    {% for p in h %}
+    {% if forloop.counter == 1 %}
+    <div class="item active">
+    {% else %}
+    <div class="item">
+    {% endif %}
+        <img src="{{ p.url }}" alt="Image" >
 
-        <img src="{{  image.url}} "  width="1200" height="700" style="margin-left:0%"/>
-
-        <div class="carousel-caption">
-          <h3>Living Room</h3>
-
-        </div>
-      </div>
-
-      <div class="item">
-
-        <img src="{{  image2.url}} "  width="1200" height="700" style="margin-left:0%"/>
-        <div class="carousel-caption">
-          <h3>Diningroom</h3>
-
-        </div>
-      </div>
-
-      <div class="item">
-
-          <img src="{{  image3}} "  width="1200" height="700" style="margin-left:0%"/>
         <div class="carousel-caption">
           <h3>Bedroom</h3>
 
         </div>
       </div>
+   {% endfor %}
     </div>
 
     <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <a class="left carousel-control" href="" role="button" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
     </a>
@@ -120,6 +107,7 @@
           {{i}}
       {%endfor%}
   </div>
+
 
 
 
@@ -245,32 +233,22 @@
   <h2>Tour the Apartment</h2>
 
   <div class="row text-center">
+      {% for p in h %}
     <div class="col-sm-4">
+
       <div class="thumbnail">
 
-        <img src="{{ image.url}}" alt="Paris">
+        <img src="{{ p.url }}" alt="Image" >
 
         <p><strong>livingroom</strong></p>
 
       </div>
+
+
+
+
     </div>
-
-    <div class="col-sm-4">
-      <div class="thumbnail">
-
-        <img src="{{ image2 }}" alt="New York">
-
-        <p><strong>diningroom</strong></p>
-
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="{{image3}}"alt="San Francisco">
-        <p><strong>bedroom</strong></p>
-
-      </div>
-    </div>
+      {% endfor %}
 </div>
 
 <div>
@@ -340,7 +318,7 @@
    bounds.extend(marker.position);
 
  }
-  var locations =["{{ address }}"]
+  var locations =["{{ address }}","hyderabad"]
 
 
   var nextAddress = 0;
@@ -352,25 +330,9 @@
       map.fitBounds(bounds);
     }
   }
-  function mymap() {
-      var delay = 100;
-      var infowindow = new google.maps.InfoWindow();
-      var latlng = new google.maps.LatLng(17.3850, 78.4867);
-      var mapOptions = {
-          zoom: 15,
-          center: latlng,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-      }
-      var geocoder = new google.maps.Geocoder();
-      var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-      var bounds = new google.maps.LatLngBounds();
-      var locations =["{{ address }}"]
-
-
-  var nextAddress = 0;
 
       theNext();
-  }
+
 </script>
 
 </div>
